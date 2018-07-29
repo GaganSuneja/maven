@@ -1,0 +1,25 @@
+.app-landing{
+
+}
+.app-landing__hero{
+    width: auto;
+    height: 500px;
+    margin:10px auto;
+    border:1px solid rgba(0,0,0,0.25);
+    border-radius:2px;
+    padding: 20px;
+    font-family: Lato;
+}
+.app-landing__hero>h2{
+    text-align :center;
+   
+}
+.app-landing__hero__navbar{
+    text-align: center;
+    max-width: 400px;
+    height: auto;
+    border:1px solid black;
+    margin:10px auto;
+    border-radius:2px;
+    padding: 10px;
+}

@@ -1,0 +1,44 @@
+<section class="app-dashboard">
+  
+  <aside class="app-dasboard__hero">
+    <h2>Dominating Crypto Currencies</h2>
+  </aside>
+
+  <section class="app-dasboard__result">
+    <aside class="app-dasboard__result__filter">
+      <div>
+        <p>Select Currency</p>
+        <mat-radio-group style="margin-right:40px;" name="radio-grp-1" (change)="changeFilter($event)" >
+          <mat-radio-button style="margin-right:10px;" [checked]="filter_name==='USD'" value="USD">USD</mat-radio-button>
+          <mat-radio-button style="margin-right:10px;" [checked]="filter_name==='INR'" value="INR">INR</mat-radio-button>
+          <mat-radio-button style="margin-right:10px;" [checked]="filter_name==='EUR'" value="EUR">EUR</mat-radio-button>
+        </mat-radio-group>
+        <button mat-raised-button color="primary" (click)="getData() ;snackbarPopup('List updated')">Refresh</button>
+      </div>
+    </aside>
+    <table mat-table [dataSource]="currencies_results" class="mat-elevation-z8 app-dashboard__result__table" style="padding:30px !important;">
+      <ng-container matColumnDef="symbol">
+        <th style="text-align: center;font-weight: bold;font-size: 15px;" mat-header-cell *matHeaderCellDef> Symbol</th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th style="text-align: center;font-weight: bold;font-size: 15px;" mat-header-cell *matHeaderCellDef> Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th style="text-align: center;font-weight: bold;font-size: 15px;"  mat-header-cell *matHeaderCellDef> Price</th>
+        <td mat-cell *matCellDef="let element">{{currType}}{{element.quotes[curr_present].price | priceFormat}} </td>
+      </ng-container> 
+      <ng-container matColumnDef="m_cap">
+        <th style="text-align: center;font-weight: bold;font-size: 15px;"  mat-header-cell *matHeaderCellDef> Market Cap</th>
+        <td mat-cell *matCellDef="let element">{{currType}}{{element.quotes[curr_present].market_cap}} </td>
+      </ng-container> 
+      <ng-container matColumnDef="notes">
+        <th style="text-align: center;font-weight: bold;font-size: 15px;width:40%"  mat-header-cell *matHeaderCellDef> Notes</th>
+        <td mat-cell *matCellDef="let element"> <span *ngIf="userNotes.notes.hasOwnProperty(element.id)">{{userNotes.notes[element.id]}}</span></td>
+      </ng-container>  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr (click)="getSpecificCurr(row.id)" style="cursor: pointer;" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </section>
+</section>
