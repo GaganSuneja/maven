@@ -1,58 +1,68 @@
-.app-dashboard{
-    width: 100%;
-    padding:20px;
-    margin:20px auto;
-    /* //border:1px solid black; */
-}
-.app-dasboard__hero h2{
-    text-align: center;
-    font-family:Lato;
-    font-weight: 700;
-}
-.app-dashboard__search{
-    width: 100%;
-    padding:20px;
-    margin:20px auto;
-    border:1px solid #9e9e9e1c;
-    border-radius: 3px;
+.app-dashboard {
+  width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  /* //border:1px solid black; */
 }
 
-.app-dashboard__result__table{
-    width: 60%;
-    padding: 20px;
-    margin:20px auto;
+.app-dasboard__hero h2 {
+  text-align: center;
+  font-family: Lato;
+  font-weight: 700;
 }
+
+.app-dashboard__search {
+  width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #9e9e9e1c;
+  border-radius: 3px;
+}
+
+.app-dashboard__result__table {
+  width: 60%;
+  padding: 20px;
+  margin: 20px auto;
+}
+
 .app-dashboard__result__table thead tr th {
-    font-weight: bold;
+  font-weight: bold;
 }
-.app-dashboard__result__table>thead>tr{
-    width: 25%;
+
+.app-dashboard__result__table>thead>tr {
+  width: 25%;
 }
-.app-dashboard__result__table td{
-    text-align: center;
-    box-sizing: border-box;
-    padding: 4px;
+
+.app-dashboard__result__table td {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 4px;
 }
-.app-dasboard__result__filter{
-    margin : 10px auto;
+
+.app-dasboard__result__filter {
+  margin: 10px auto;
 
 }
-.app-dasboard__result__filter div label{
-    margin-right: 2px;
+
+.app-dasboard__result__filter div label {
+  margin-right: 2px;
 }
-.app-dasboard__result__filter div{
-   /* / display: inline-block; */
-    margin: 30px auto;
-    width: 350px;
+
+.app-dasboard__result__filter div {
+  /* / display: inline-block; */
+  margin: 30px auto;
+  width: 350px;
 }
-.in-primary{
-    border:1px solid #9e9e9e1c;
-    border-radius: 3px;
-    font-family: Lato;  
-    width: 80%;
-    padding: 15px;
-    outline: none;
+
+.in-primary {
+  border: 1px solid #9e9e9e1c;
+  border-radius: 3px;
+  font-family: Lato;
+  width: 80%;
+  padding: 15px;
+  outline: none;
 }
-table>tbody tr:hover{
-    bacground-color:blue;
+
+table>tbody tr:hover {
+  bacground-color: blue;
 }
